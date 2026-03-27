@@ -373,7 +373,38 @@
       <footer class="site-footer">
         <p>SUMINISTROS SANTA EMILIA SL</p>
         <p>C/ Calidad, 34 - Edif. 1 Nave 8 Pol. Ind. Los Olivos Getafe - 28906 - Madrid España</p>
+        <p><a href="./politica-cookies.html">Política de cookies</a></p>
       </footer>
     </div>
+    <div class="cookie-banner" id="cookie-banner" hidden>
+      <div class="cookie-copy">
+        <strong>Uso de cookies</strong>
+        <p>
+          Esta web utiliza cookies técnicas para mejorar la navegación y recordar tus preferencias
+          básicas.
+        </p>
+      </div>
+      <button class="button button-primary cookie-button" id="cookie-accept" type="button">
+        Aceptar
+      </button>
+    </div>
+    <script>
+      const cookieBanner = document.getElementById("cookie-banner");
+      const cookieAccept = document.getElementById("cookie-accept");
+      const cookieKey = "sse_cookie_accepted";
+
+      if (cookieBanner && cookieAccept) {
+        const accepted = window.localStorage.getItem(cookieKey);
+
+        if (!accepted) {
+          cookieBanner.hidden = false;
+        }
+
+        cookieAccept.addEventListener("click", () => {
+          window.localStorage.setItem(cookieKey, "true");
+          cookieBanner.hidden = true;
+        });
+      }
+    </script>
   </body>
 </html>
