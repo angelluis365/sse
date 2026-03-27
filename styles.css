@@ -78,10 +78,21 @@ a {
   gap: 14px;
 }
 
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .brand-logo {
   width: 62px;
   height: 62px;
   object-fit: contain;
+}
+
+.brand-logos .brand-logo:last-child {
+  width: 104px;
+  height: 68px;
 }
 
 .brand-copy {
