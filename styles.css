@@ -235,12 +235,24 @@ h2 {
   justify-items: start;
 }
 
+.hero-logo-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+}
+
 .partner-logo-main {
-  width: min(100%, 240px);
+  width: min(100%, 220px);
+  height: 140px;
+  object-fit: contain;
 }
 
 .partner-logo-axis {
-  width: min(100%, 180px);
+  width: min(100%, 220px);
+  height: 140px;
+  object-fit: contain;
 }
 
 .card-title {
@@ -480,6 +492,10 @@ h2 {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero-logo-pair {
+    grid-template-columns: 1fr;
   }
 
   .contact-notes {
